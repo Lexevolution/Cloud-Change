@@ -7,9 +7,10 @@
     <Deterministic>true</Deterministic>
     <CopyLocal>false</CopyLocal>
     <CopyToMods Condition="'$(CopyToMods)'==''">true</CopyToMods>
-		<NeosPath>$(MSBuildThisFileDirectory)NeosVR</NeosPath>
+        <NeosPath>$(MSBuildThisFileDirectory)NeosVR</NeosPath>
     <NeosPath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\NeosVR\')">C:\Program Files (x86)\Steam\steamapps\common\NeosVR\</NeosPath>
     <NeosPath Condition="Exists('$(HOME)/.steam/steam/steamapps/common/NeosVR/')">$(HOME)/.steam/steam/steamapps/common/NeosVR/</NeosPath>
+    <NeosPath Condition="Exists('D:\SteamLibrary\steamapps\common\NeosVR\')">D:\SteamLibrary\steamapps\common\NeosVR\</NeosPath>
     <GameRefsPath>$(NeosPath)Neos_Data\Managed\</GameRefsPath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -20,6 +21,7 @@
   <ItemGroup>
     <Reference Include="NeosModLoader">
       <HintPath>$(NeosPath)Libraries\NeosModLoader.dll</HintPath>
+      <HintPath>D:\Games\NeosVR_Data\Saves\Plugins\NeosModLoader.dll</HintPath>
     </Reference>
     <Reference Include="HarmonyLib">
       <HintPath>$(NeosPath)0Harmony.dll</HintPath>
@@ -27,7 +29,7 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>$(GameRefsPath)Assembly-CSharp.dll</HintPath>
     </Reference>
-		<Reference Include="BaseX">
+        <Reference Include="BaseX">
       <HintPath>$(GameRefsPath)BaseX.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">

@@ -1,16 +1,19 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
   <!-- Builds all other *.csproj files under this repository. -->
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectFiles Include="**/*.csproj" Exclude="Neos-Mods.csproj" />
   </ItemGroup>
-
   <Target Name="Build">
     <MSBuild Projects="@(ProjectFiles)" Targets="Rebuild" />
   </Target>
-
   <Target Name="Restore">
     <MSBuild Projects="@(ProjectFiles)" Targets="Restore" />
   </Target>
-
 </Project>

@@ -5,10 +5,10 @@ using HarmonyLib;
 using NeosModLoader;
 using UnityEngine;
 
-namespace Example
+namespace CloudChange
 {
 	[HarmonyPatch]
-	class ExampleMod : NeosMod
+	class CloudChange : NeosMod
 	{
 		public override string Name => BuildInfo.Name;
 		public override string Author => BuildInfo.Author;
@@ -21,7 +21,6 @@ namespace Example
 			{
 				Harmony harmony = new(BuildInfo.GUID);
 				harmony.PatchAll();
-				Msg("Patched successfully");
 			}
 			catch (Exception ex)
 			{
@@ -29,11 +28,6 @@ namespace Example
 			}
 		}
 
-		[HarmonyPatch(typeof(CommonTool), "HoldMenu")]
-		[HarmonyPostfix]
-		private static void ExampleHarmonyPatch()
-		{
-			Msg("Do a thing!");
-		}
+
 	}
 }
