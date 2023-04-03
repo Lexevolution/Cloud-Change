@@ -6,7 +6,7 @@
     <BuildProjectReferences>false</BuildProjectReferences>
     <Deterministic>true</Deterministic>
     <CopyLocal>false</CopyLocal>
-    <CopyToMods Condition="'$(CopyToMods)'==''">true</CopyToMods>
+    <CopyToMods Condition="'$(CopyToMods)'==''">false</CopyToMods>
         <NeosPath>$(MSBuildThisFileDirectory)NeosVR</NeosPath>
     <NeosPath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\NeosVR\')">C:\Program Files (x86)\Steam\steamapps\common\NeosVR\</NeosPath>
     <NeosPath Condition="Exists('$(HOME)/.steam/steam/steamapps/common/NeosVR/')">$(HOME)/.steam/steam/steamapps/common/NeosVR/</NeosPath>
@@ -41,6 +41,9 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GameRefsPath)UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+	<Reference Include="CloudX.Shared">
+		<HintPath>$(GameRefsPath)CloudX.Shared.dll</HintPath>
+	</Reference>
   </ItemGroup>
 
 
