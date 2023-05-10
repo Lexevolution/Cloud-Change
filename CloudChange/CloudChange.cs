@@ -16,19 +16,19 @@ namespace CloudChange
 		public override string Link => BuildInfo.Link;
 
 		[AutoRegisterConfigKey]
-		private static readonly ModConfigurationKey<string> API_URL = new("API URL", "API URL: The endpoint for most of the API actions in Neos.", () => "https://cloudx.azurewebsites.net");
+		private static readonly ModConfigurationKey<string> API_URL = new("API URL", "API URL: The endpoint for most of the API actions in Neos.", () => "https://api.neos.com");
         [AutoRegisterConfigKey]
-        private static readonly ModConfigurationKey<string> BLOB_STORAGE_URL = new("Blob Storage URL", "Blob Storage URL: The root endpoint which stores all the assets for all objects.", () => "https://cloudxstorage.blob.core.windows.net/");
+        private static readonly ModConfigurationKey<string> BLOB_STORAGE_URL = new("Blob Storage URL", "Blob Storage URL: The root endpoint which stores all the assets for all objects.", () => "https://assets.neos.com/");
         [AutoRegisterConfigKey]
         private static readonly ModConfigurationKey<string> ASSETS_BLOB_URL = new("Blob Retrieval URL", "Blob Retrieval URL: The endpoint which retrieves the assets stored at the Blob Storage URL", () => "https://cloudxstorage.blob.core.windows.net/assets/");
         [AutoRegisterConfigKey]
-        private static readonly ModConfigurationKey<string> ASSETS_CDN_URL = new("CDN URL", "CDN URL: The endpoint which delivers assets faster than the Blob Retrieval URL.", () => "https://cloudx.azureedge.net/assets/");
+        private static readonly ModConfigurationKey<string> ASSETS_CDN_URL = new("CDN URL", "CDN URL: The endpoint which delivers assets faster than the Blob Retrieval URL.", () => "https://assets.neos.com/assets/");
         [AutoRegisterConfigKey]
-        private static readonly ModConfigurationKey<string> VIDEO_CDN_URL = new("Video CDN URL", "Video CDN URL: The endpoint which delivers specifically video assets saved to your inventory (neodb videos)", () => "https://cloudx.azureedge.net/assets/");
+        private static readonly ModConfigurationKey<string> VIDEO_CDN_URL = new("Video CDN URL", "Video CDN URL: The endpoint which delivers specifically video assets saved to your inventory (neosdb videos)", () => "https://assets.neos.com/assets/");
         [AutoRegisterConfigKey]
         private static readonly ModConfigurationKey<string> OLD_THUMBNAIL_URL = new("Old Thumbnail URL", "Old Thumbnail URL: The endpoint which used to store and retrieve thumbnails for sessions.", () => "https://cloudxstorage.blob.core.windows.net/thumbnails/");
         [AutoRegisterConfigKey]
-        private static readonly ModConfigurationKey<string> THUMBNAIL_URL = new("Thumbnail URL", "Thumbnail URL: The endpoint which stores and retrieves thumbnails for sessions.", () => "https://cloudxoperationalblob.blob.core.windows.net/thumbnails/");
+        private static readonly ModConfigurationKey<string> THUMBNAIL_URL = new("Thumbnail URL", "Thumbnail URL: The endpoint which stores and retrieves thumbnails for sessions.", () => "https://operationaldata.neos.com/thumbnails/");
 
 		private static ModConfiguration config;
         public override void OnEngineInit()
