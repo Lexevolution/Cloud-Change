@@ -2,10 +2,10 @@
 
 This is a [Neos Mod Loader](https://github.com/neos-modding-group/NeosModLoader) mod that allows you to change what cloud endpoints Neos uses. Possibly useful for a custom cloud server.
 
-The current default options also fix some of the issues [here](https://github.com/Neos-Metaverse/NeosPublic/issues/3872). These include:
+~~The current default options also fix some of the issues [here](https://github.com/Neos-Metaverse/NeosPublic/issues/3872). These include:~~ (This is no longer the case as all issues have been fixed)
 - ~~Session thumbnails not being uploaded with the correct syntax~~ (Fixed with an update)
 - ~~neosdb videos not loading~~ (Fixed with an update)
-- Linux native build being completely unusable
+- ~~Linux native build being completely unusable~~ ("Fixed" by Karel fixing the old URLs)
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/neos-modding-group/NeosModLoader).
